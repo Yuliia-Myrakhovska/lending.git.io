@@ -1,0 +1,583 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:link,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/* Style homepage */
+
+$color-white: #fafed7;
+$color-black: #000000;
+$color-purpul: #80ba98;
+$color-dark-blue: #0e3e63;
+$color-gray: #cac1a5;
+
+$border-radius: 10px;
+$font-title: 22px;
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+@mixin font($color, $size) {
+  font-family: "Work Sans", sans-serif;
+  font-size: $size;
+  font-weight: 400;
+  font-style: normal;
+  color: $color;
+}
+
+@mixin foto($url, $height) {
+  background: url($url);
+  height: $height;
+  background-position: center;
+  background-size: cover;
+  border-radius: $border-radius;
+  background-color: rgba(14, 62, 99, 0.5);
+  background-blend-mode: multiply;
+}
+
+@mixin button($color, $bg-color, $border...) {
+  text-align: center;
+  padding: 15px 35px;
+  border: $border;
+  color: $color;
+  background-color: $bg-color;
+  border-radius: $border-radius;
+  transition: background-color 0.7s ease, color 0.7s ease;
+  text-transform: uppercase;
+}
+
+@mixin button-hover($bg-color) {
+  transition: background-color 0.7s ease, color 0.7s ease;
+  background-color: $bg-color;
+  color: $color-white;
+  cursor: pointer;
+}
+
+@mixin title($size, $bottom) {
+  font-size: $size;
+  text-transform: uppercase;
+  margin-bottom: $bottom;
+  font-weight: 500;
+}
+
+body {
+  @include font($color-black, 16px);
+}
+
+.navbar {
+  border-radius: $border-radius;
+  background-color: $color-dark-blue;
+  margin: 8px 0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    .logo__img {
+      font-size: 30px;
+      color: $color-white;
+    }
+
+    .logo__text {
+      @include font($color-white, 30px);
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+
+    .navbar-icon {
+      font-size: 30px;
+      color: $color-white;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        @include font($color-white, $font-title);
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+
+        &:hover:not(.dropdown-toggle) {
+          transition: color 0.3s ease;
+          color: $color-purpul;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  margin: 8px 0;
+
+  .carousel {
+    height: 50vh;
+    border-radius: $border-radius;
+
+    .carousel-indicators {
+      right: inherit;
+      margin-left: 20px;
+
+      button {
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        background-color: $color-white;
+        margin-right: 6px;
+        margin-left: 6px;
+
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .carousel-inner {
+      .carousel-item1 {
+        @include foto("../img/3d-rendering-house-model.jpg", 100%);
+      }
+
+      .carousel-item2 {
+        @include foto(
+          "../img/luxurious-villa-with-modern-architectural-design.jpg",
+          100%
+        );
+      }
+
+      .carousel-item3 {
+        @include foto("../img/three-dimensional-house-model.jpg", 100%);
+      }
+
+      .carousel-item {
+        align-content: center;
+        padding-left: 20px;
+
+        .subtitle,
+        .title,
+        .carusel-text {
+          color: $color-white;
+        }
+
+        .subtitle {
+          font-size: 30px;
+          position: relative;
+          padding-left: 70px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: $color-white;
+          }
+        }
+
+        .title {
+          font-size: 40px;
+        }
+
+        .button {
+          align-content: center;
+
+          a {
+            @include button($color-white, $color-dark-blue, none);
+
+            &:hover {
+              @include button-hover($color-purpul);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.cards {
+  margin: 8px 0;
+
+  .card {
+    border-radius: $border-radius;
+
+    .card__img {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 6px;
+
+      img {
+        display: block;
+        border-radius: $border-radius;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(14, 62, 99, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: $border-radius;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+
+    .card-title {
+      @include title($font-title, 0);
+    }
+
+    .card-text,
+    .card-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    .list-group {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .list-group-item {
+        margin: 0 auto 5px;
+        border: none;
+        background-color: transparent;
+      }
+
+      .list-group-item:nth-child(1) {
+        color: $color-purpul;
+      }
+    }
+  }
+}
+
+.info {
+  background-color: $color-purpul;
+  margin: 8px 0;
+  padding: 50px 0;
+
+  .info__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+    gap: 20px;
+
+    .icon {
+      font-size: 30px;
+    }
+
+    .text {
+      .text__title {
+        @include title($font-title, 10px);
+      }
+
+      .text__info {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.categories {
+  margin: 12px 0;
+
+  .categories__title {
+    @include title($font-title, 30px);
+    text-align: center;
+  }
+
+  .categories__text,
+  .categories__name {
+    text-align: center;
+  }
+
+  .img__wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 6px;
+
+    img {
+      display: block;
+      border-radius: $border-radius;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(14, 62, 99, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: $border-radius;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+.team {
+  .team__title {
+    @include title($font-title, 30px);
+    text-align: center;
+  }
+
+  .team__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+
+    .foto {
+      img {
+        height: 200px;
+        width: 350px;
+        border-radius: $border-radius;
+      }
+    }
+
+    .text {
+      .text__title {
+        font-size: 20px;
+      }
+
+      .text__info {
+        text-align: justify;
+      }
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+
+      .bi-telephone-fill {
+        font-size: 20px;
+        color: $color-purpul;
+      }
+
+      .contact__item {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.offers {
+  @include foto("../img/three-dimensional-house-model.jpg", 400px);
+  color: $color-white;
+  text-align: center;
+
+  .offers__title {
+    @include title($font-title, 30px);
+    margin-top: 50px;
+  }
+
+  .offers__subtitle {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  button {
+    align-content: center;
+    margin-top: 50px;
+
+    a {
+      @include button($color-white, $color-dark-blue, none);
+
+      &:hover {
+        @include button-hover($color-purpul);
+      }
+    }
+  }
+}
+
+.form {
+  margin: 30px 0;
+
+  .form__title {
+    @include title($font-title, 30px);
+    text-align: center;
+  }
+
+  form {
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $color-dark-blue;
+      border-radius: $border-radius;
+      font-size: 16px;
+      margin-bottom: 15px;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: $color-dark-blue;
+      outline: none;
+    }
+
+    button {
+      align-content: center;
+      margin-left: 40%;
+      @include button($color-white, $color-dark-blue, none);
+
+      &:hover {
+        @include button-hover($color-purpul);
+      }
+    }
+  }
+  .form__img {
+    display: block;
+    img {
+      width: 70%;
+    }
+  }
+}
+
+.footer__text {
+  border-radius: $border-radius;
+  background-color: $color-dark-blue;
+  margin: 8px 0;
+  padding: 25px 0;
+  @include font($color-white, 16px);
+}
+
+@media screen and (max-width: 778px) {
+  .card {
+    .card-title {
+      font-size: 20px;
+    }
+  }
+
+  .team {
+    .team__wrapper {
+      .foto {
+        img {
+          height: 150px;
+          width: 300px;
+        }
+      }
+    }
+  }
+  .form {
+    .form__img {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,528 @@
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:link, a:visited, a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/* Style homepage */
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+}
+
+.navbar {
+  border-radius: 10px;
+  background-color: #0e3e63;
+  margin: 8px 0;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.navbar .logo .logo__img {
+  font-size: 30px;
+  color: #fafed7;
+}
+.navbar .logo .logo__text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fafed7;
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler .navbar-icon {
+  font-size: 30px;
+  color: #fafed7;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  font-family: "Work Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fafed7;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover:not(.dropdown-toggle) {
+  transition: color 0.3s ease;
+  color: #80ba98;
+}
+
+.banner {
+  margin: 8px 0;
+}
+.banner .carousel {
+  height: 50vh;
+  border-radius: 10px;
+}
+.banner .carousel .carousel-indicators {
+  right: inherit;
+  margin-left: 20px;
+}
+.banner .carousel .carousel-indicators button {
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fafed7;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+.banner .carousel .carousel-indicators button:nth-child(1) {
+  margin-left: 0;
+}
+.banner .carousel .carousel-inner .carousel-item1 {
+  background: url("../img/3d-rendering-house-model.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  background-color: rgba(14, 62, 99, 0.5);
+  background-blend-mode: multiply;
+}
+.banner .carousel .carousel-inner .carousel-item2 {
+  background: url("../img/luxurious-villa-with-modern-architectural-design.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  background-color: rgba(14, 62, 99, 0.5);
+  background-blend-mode: multiply;
+}
+.banner .carousel .carousel-inner .carousel-item3 {
+  background: url("../img/three-dimensional-house-model.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  background-color: rgba(14, 62, 99, 0.5);
+  background-blend-mode: multiply;
+}
+.banner .carousel .carousel-inner .carousel-item {
+  align-content: center;
+  padding-left: 20px;
+}
+.banner .carousel .carousel-inner .carousel-item .subtitle,
+.banner .carousel .carousel-inner .carousel-item .title,
+.banner .carousel .carousel-inner .carousel-item .carusel-text {
+  color: #fafed7;
+}
+.banner .carousel .carousel-inner .carousel-item .subtitle {
+  font-size: 30px;
+  position: relative;
+  padding-left: 70px;
+}
+.banner .carousel .carousel-inner .carousel-item .subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #fafed7;
+}
+.banner .carousel .carousel-inner .carousel-item .title {
+  font-size: 40px;
+}
+.banner .carousel .carousel-inner .carousel-item .button {
+  align-content: center;
+}
+.banner .carousel .carousel-inner .carousel-item .button a {
+  text-align: center;
+  padding: 15px 35px;
+  border: none;
+  color: #fafed7;
+  background-color: #0e3e63;
+  border-radius: 10px;
+  transition: background-color 0.7s ease, color 0.7s ease;
+  text-transform: uppercase;
+}
+.banner .carousel .carousel-inner .carousel-item .button a:hover {
+  transition: background-color 0.7s ease, color 0.7s ease;
+  background-color: #80ba98;
+  color: #fafed7;
+  cursor: pointer;
+}
+
+.cards {
+  margin: 8px 0;
+}
+.cards .card {
+  border-radius: 10px;
+}
+.cards .card .card__img {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.cards .card .card__img img {
+  display: block;
+  border-radius: 10px;
+}
+.cards .card .card__img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(14, 62, 99, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+.cards .card .card__img:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+.cards .card .card-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.cards .card .card-text,
+.cards .card .card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.cards .card .list-group {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cards .card .list-group .list-group-item {
+  margin: 0 auto 5px;
+  border: none;
+  background-color: transparent;
+}
+.cards .card .list-group .list-group-item:nth-child(1) {
+  color: #80ba98;
+}
+
+.info {
+  background-color: #80ba98;
+  margin: 8px 0;
+  padding: 50px 0;
+}
+.info .info__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: row;
+  gap: 20px;
+}
+.info .info__wrapper .icon {
+  font-size: 30px;
+}
+.info .info__wrapper .text .text__title {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.info .info__wrapper .text .text__info {
+  text-align: justify;
+}
+
+.categories {
+  margin: 12px 0;
+}
+.categories .categories__title {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.categories .categories__text,
+.categories .categories__name {
+  text-align: center;
+}
+.categories .img__wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.categories .img__wrapper img {
+  display: block;
+  border-radius: 10px;
+}
+.categories .img__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(14, 62, 99, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+.categories .img__wrapper:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.team .team__title {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.team .team__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+}
+.team .team__wrapper .foto img {
+  height: 200px;
+  width: 350px;
+  border-radius: 10px;
+}
+.team .team__wrapper .text .text__title {
+  font-size: 20px;
+}
+.team .team__wrapper .text .text__info {
+  text-align: justify;
+}
+.team .team__wrapper .contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.team .team__wrapper .contact .bi-telephone-fill {
+  font-size: 20px;
+  color: #80ba98;
+}
+.team .team__wrapper .contact .contact__item {
+  margin: 0;
+}
+
+.offers {
+  background: url("../img/three-dimensional-house-model.jpg");
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  background-color: rgba(14, 62, 99, 0.5);
+  background-blend-mode: multiply;
+  color: #fafed7;
+  text-align: center;
+}
+.offers .offers__title {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+.offers .offers__subtitle {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+.offers button {
+  align-content: center;
+  margin-top: 50px;
+}
+.offers button a {
+  text-align: center;
+  padding: 15px 35px;
+  border: none;
+  color: #fafed7;
+  background-color: #0e3e63;
+  border-radius: 10px;
+  transition: background-color 0.7s ease, color 0.7s ease;
+  text-transform: uppercase;
+}
+.offers button a:hover {
+  transition: background-color 0.7s ease, color 0.7s ease;
+  background-color: #80ba98;
+  color: #fafed7;
+  cursor: pointer;
+}
+
+.form {
+  margin: 30px 0;
+}
+.form .form__title {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.form form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0e3e63;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+.form form .form-control:focus {
+  border-color: #0e3e63;
+  outline: none;
+}
+.form form button {
+  align-content: center;
+  margin-left: 40%;
+  text-align: center;
+  padding: 15px 35px;
+  border: none;
+  color: #fafed7;
+  background-color: #0e3e63;
+  border-radius: 10px;
+  transition: background-color 0.7s ease, color 0.7s ease;
+  text-transform: uppercase;
+}
+.form form button:hover {
+  transition: background-color 0.7s ease, color 0.7s ease;
+  background-color: #80ba98;
+  color: #fafed7;
+  cursor: pointer;
+}
+.form .form__img {
+  display: block;
+}
+.form .form__img img {
+  width: 70%;
+}
+
+.footer__text {
+  border-radius: 10px;
+  background-color: #0e3e63;
+  margin: 8px 0;
+  padding: 25px 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fafed7;
+}
+
+@media screen and (max-width: 778px) {
+  .card .card-title {
+    font-size: 20px;
+  }
+  .team .team__wrapper .foto img {
+    height: 150px;
+    width: 300px;
+  }
+  .form .form__img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

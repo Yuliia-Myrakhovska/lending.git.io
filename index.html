@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inHouse</title>
+
+    <link
+      rel="shortcut icon"
+      href="./img/icon/house-door-fill.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg align-items-center">
+          <div class="container-fluid">
+            <div class="logo">
+              <i class="bi bi-house-door-fill logo__img"></i>
+              <a class="navbar-brand logo__text" href="#">inHouse</a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="bi bi-justify navbar-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="banner">
+        <div class="container">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner h-100">
+              <div
+                class="carousel-item carousel-item1 active"
+                data-bs-interval="5000"
+              >
+                <h2 class="subtitle">More Than 20 Years of</h2>
+                <h1 class="title">Experience</h1>
+                <p class="carusel-text">
+                  Founded in 1989, our company is a team of renowned property
+                  management and real estate experts always ready to help you.
+                </p>
+                <div class="button"><a>View Properties</a></div>
+              </div>
+              <div class="carousel-item carousel-item2" data-bs-interval="5000">
+                <h2 class="subtitle">Offering Diverse</h2>
+                <h1 class="title">Properties</h1>
+                <p class="carusel-text">
+                  inHouse provides you with lots of great properties throughout
+                  the USA so that you could easily choose your dream property.
+                </p>
+                <div class="button"><a>View Properties</a></div>
+              </div>
+              <div class="carousel-item carousel-item3" data-bs-interval="5000">
+                <h2 class="subtitle">Easily</h2>
+                <h1 class="title">Rent & Sale</h1>
+                <p class="carusel-text">
+                  With the help of our services and property management
+                  solutions, you can rent or sell any house or apartment.
+                </p>
+                <div class="button"><a>View Properties</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-lg-6 col-md-12">
+              <div class="card">
+                <div class="card__img">
+                  <img
+                    src="./img/courtyard-monastery-park.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    5619 Walnut Hill Ln, Dallas, TX 75229
+                  </h5>
+                  <p class="card-text">
+                    A comfortable residential property located in a quiet and
+                    cozy area.
+                  </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">$1500/mon</li>
+                  <li class="list-group-item">30 Sq. Ft.</li>
+                  <li class="list-group-item">3 Bedrooms</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="card">
+                <div class="card__img">
+                  <img
+                    src="./img/luxurious-villa-with-modern-architectural-design.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    1808 Bolingbroke Pl, Fort Worth, TX 76140
+                  </h5>
+                  <p class="card-text">
+                    Perfect for those who love both city life and the
+                    countryside.
+                  </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">$1300/mon</li>
+                  <li class="list-group-item">40 Sq. Ft.</li>
+                  <li class="list-group-item">2 Bedrooms</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 mt-3">
+            <div class="col-lg-6 col-md-12">
+              <div class="card">
+                <div class="card__img">
+                  <img
+                    src="./img/old-wooden-house-village.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    924 Bel Air Rd, Los Angeles, CA 90077
+                  </h5>
+                  <p class="card-text">
+                    Located in 5 mins from downtown, this property is great for
+                    anyone.
+                  </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">$1800/mon</li>
+                  <li class="list-group-item">50 Sq. Ft.</li>
+                  <li class="list-group-item">4 Bedrooms</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="card">
+                <div class="card__img">
+                  <img
+                    src="./img/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    13510 W Cheery Lynn Rd, Avondale, AZ 85392
+                  </h5>
+                  <p class="card-text">
+                    A luxury mansion for people who enjoy the high-end
+                    amenities.
+                  </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">$2700/mon</li>
+                  <li class="list-group-item">90 Sq. Ft.</li>
+                  <li class="list-group-item">2 Bedrooms</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="info">
+        <div class="container">
+          <div class="row g-3">
+            <div class="info__wrapper col-lg-4 col-md-12">
+              <div class="icon">
+                <i class="bi bi-person"></i>
+              </div>
+              <div class="text">
+                <h3 class="text__title">Qualified Employees</h3>
+                <p class="text__info">
+                  Our team consists of more than 20 qualified and experienced
+                  real estate brokers and property managers ready to help you.
+                </p>
+              </div>
+            </div>
+            <div class="info__wrapper col-lg-4 col-md-12">
+              <div class="icon">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <div class="text">
+                <h3 class="text__title">Free Consultations</h3>
+                <p class="text__info">
+                  Our acquaintance with a client always begins with a free
+                  consultation to find out what kind of property they are
+                  looking for.
+                </p>
+              </div>
+            </div>
+            <div class="info__wrapper col-lg-4 col-md-12">
+              <div class="icon">
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="text">
+                <h3 class="text__title">100% Guaranteed</h3>
+                <p class="text__info">
+                  All the results that you get from our realtors are 100%
+                  guaranteed to offer you the best choice of properties
+                  throughout the USA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="categories">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="categories__title">Residential property categories</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p class="categories__text">
+                At our agency, we work with various types of residential real
+                estate property. You can find out more about our properties by
+                browsing our website.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="img__wrapper">
+                <img
+                  src="./img/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpg"
+                  alt=""
+                  class="categories__img"
+                />
+              </div>
+              <p class="categories__name">Single-Family Homes</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="img__wrapper">
+                <img
+                  src="./img/courtyard-monastery-park.jpg"
+                  alt=""
+                  class="categories__img"
+                />
+              </div>
+              <p class="categories__name">Townhouses</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="img__wrapper">
+                <img
+                  src="./img/luxurious-villa-with-modern-architectural-design.jpg"
+                  alt=""
+                  class="categories__img"
+                />
+              </div>
+              <p class="categories__name">Multi-Family Homes</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="img__wrapper">
+                <img
+                  src="./img/old-wooden-house-village.jpg"
+                  alt=""
+                  class="categories__img"
+                />
+              </div>
+              <p class="categories__name">Condominiums</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="team__title">Our team</h2>
+            </div>
+          </div>
+          <div class="row gy-5 gx-5">
+            <div class="team__wrapper col-lg-6 col-md-6 col-sm-12">
+              <div class="foto">
+                <img
+                  src="./img/empowered-business-woman-office (1).jpg"
+                  alt=""
+                  class="foto__img"
+                />
+              </div>
+              <div class="text">
+                <h3 class="text__title">Nathalie Porter</h3>
+                <p class="text__team">Founder, Broker</p>
+                <div class="contact">
+                  <i class="bi bi-telephone-fill"></i>
+                  <p class="contact__item">1-800-1324-567</p>
+                </div>
+                <p class="text__info">
+                  Ms. Porter founded our company in 1989 with a vision to help
+                  guests and residents of the USA to easily find and buy or rent
+                  real estate in all 50 states.
+                </p>
+              </div>
+            </div>
+            <div class="team__wrapper col-lg-6 col-md-6 col-sm-12">
+              <div class="foto">
+                <img
+                  src="./img/empowered-business-woman-office.jpg"
+                  alt=""
+                  class="foto__img"
+                />
+              </div>
+              <div class="text">
+                <h3 class="text__title">Marie Fernandez</h3>
+                <p class="text__team">Broker</p>
+                <div class="contact">
+                  <i class="bi bi-telephone-fill"></i>
+                  <p class="contact__item">1-800-1324-567</p>
+                </div>
+                <p class="text__info">
+                  Marie’s goal is to provide clients with the highest level of
+                  marketing expertise and customer service to help them reach
+                  their uppermost real estate goals.
+                </p>
+              </div>
+            </div>
+            <div class="team__wrapper col-lg-6 col-md-6 col-sm-12">
+              <div class="foto">
+                <img
+                  src="./img/empowered-business-woman-office.jpg"
+                  alt=""
+                  class="foto__img"
+                />
+              </div>
+              <div class="text">
+                <h3 class="text__title">Marie Fernandez</h3>
+                <p class="text__team">Broker</p>
+                <div class="contact">
+                  <i class="bi bi-telephone-fill"></i>
+                  <p class="contact__item">1-800-1324-567</p>
+                </div>
+                <p class="text__info">
+                  Marie’s goal is to provide clients with the highest level of
+                  marketing expertise and customer service to help them reach
+                  their uppermost real estate goals.
+                </p>
+              </div>
+            </div>
+            <div class="team__wrapper col-lg-6 col-md-6 col-sm-12">
+              <div class="foto">
+                <img
+                  src="./img/empowered-business-woman-office (1).jpg"
+                  alt=""
+                  class="foto__img"
+                />
+              </div>
+              <div class="text">
+                <h3 class="text__title">Nathalie Porter</h3>
+                <p class="text__team">Founder, Broker</p>
+                <div class="contact">
+                  <i class="bi bi-telephone-fill"></i>
+                  <p class="contact__item">1-800-1324-567</p>
+                </div>
+                <p class="text__info">
+                  Ms. Porter founded our company in 1989 with a vision to help
+                  guests and residents of the USA to easily find and buy or rent
+                  real estate in all 50 states.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="offers">
+        <div class="container">
+          <div class="row justify-content-center align-content-center">
+            <div class="col">
+              <h2 class="offers__title">Best offers</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3 class="offers__subtitle">of September</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p class="offers__text">
+                With a variety of accountants available at our company, you can
+                always choose one that fits your corporate requirements.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button><a href="">Read more</a></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="form">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+              <h2 class="mb-4 form__title">Leave Your Comment</h2>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="comment" class="form-label">Comment</label>
+                  <textarea
+                    class="form-control"
+                    id="comment"
+                    rows="5"
+                    placeholder="Enter your comment"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            <div class="form__img col-lg-6 col-md-12 text-center">
+              <div class="p-4">
+                <img
+                  src="img/4991046.jpg"
+                  alt="Decorative Image"
+                  class="img-fluid rounded"
+                />
+              </div>
+              <p class="mt-3 text-muted">
+                We value your feedback! Your comments help us improve and grow
+                better.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text text-center mb-0">
+          © 2025 inHouse. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
